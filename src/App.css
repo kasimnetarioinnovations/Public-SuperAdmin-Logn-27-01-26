@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.input-placeholder::placeholder{
+    color: #BABABA;
+    font-family: "Inter";
+      font-size: clamp(14px, 2vw, 14px);
+}
+.input-outline:hover{
+    outline: 1px solid rgb(145, 145, 243) !important;
+}
