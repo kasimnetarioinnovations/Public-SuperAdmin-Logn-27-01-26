@@ -1,0 +1,98 @@
+import React from 'react'
+import login_background from "../assets/Image/login-image.png";
+import munc_logo from "../assets/Image/munc-logo.png";
+import { Link } from "react-router-dom";
+import "../Responsive.css"
+
+
+
+const CheckEmailLinkMessage = () => {
+  return (
+    <div>
+         <div className="d-flex" style={{height:"100vh"}}>
+       
+        {/* login-container */}
+        <div
+          className="login-container"
+          style={{
+            backgroundColor: "white",
+            width: "100%",
+            // height: "100vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontFamily: "Inter",
+            
+          }}
+        >
+            
+          <div
+            className="register-account-container"
+            style={{
+              padding: "40px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            
+            <img
+              src={munc_logo}
+              alt="munc_logo"
+              style={{
+                maxWidth: "214px",
+                width: "100%",
+                paddingBottom: "15px",
+              }}
+            />
+            <div className="register-account-head-title text-center">
+              <h3
+                style={{
+                  fontSize: "clamp(14px,2vw,20px)",
+                  fontWeight: "600",
+                  color: "#000000",
+                }}
+              >
+               Check Your Email
+              </h3>
+              <p
+                style={{
+                  fontSize: "clamp(12px,2vw,14px)",
+                  color: "#1E1E1E",
+                  fontWeight: "400",
+                }}
+              >
+                We’ve sent you a verification link to confirm your account.
+              </p>
+            </div>
+              <Link to="/login">
+              <button className='input-all-box' style={{width:"400px", border:"1px solid #0084FF", color:"#0084FF", padding: "12px 16px",
+                  borderRadius: "8px",
+                  fontSize: "clamp(14px,2vw,16px)",
+                  fontWeight: "500",backgroundColor:"transparent"}}>Thanks For Choosing Us !</button>
+                  </Link>
+           
+              
+          </div>
+        </div>
+         {/* login-background */}
+        <div
+          className="login-background"
+          style={{
+            backgroundColor: "#0447AA",
+            width: "100%",
+            // height: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img src={login_background} alt="login_background"  style={{width:"100%", maxWidth:"782px"}}/>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default CheckEmailLinkMessage

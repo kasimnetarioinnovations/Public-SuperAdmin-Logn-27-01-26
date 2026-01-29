@@ -8,4 +8,12 @@
 .input-outline:hover{
     outline: 1px solid rgb(145, 145, 243) !important;
 }
+.select-plan-right input[type=checkbox] {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+.plan-btn-active{
+     background-color: #0056F5 !important;  
+     color: white;
+}
 

@@ -4,10 +4,10 @@ import munc_logo from "../assets/Image/munc-logo.png";
 import { Link } from "react-router-dom";
 import "../Responsive.css"
 
-const RegisterAccount = () => {
+const RegisterCompanyDetails = () => {
   return (
     <div>
-      <div className="d-flex justify-content-between">
+      <div className="d-flex" style={{height:"100vh"}}>
         {/* login-container */}
         <div
           className="login-container"
@@ -53,7 +53,7 @@ const RegisterAccount = () => {
               </h3>
               <p
                 style={{
-                  fontSize: "clamp(14px,2vw,14pxpx)",
+                  fontSize: "clamp(14px,2vw,14px)",
                   color: "#1E1E1E",
                   fontWeight: "400",
                 }}
@@ -70,19 +70,18 @@ const RegisterAccount = () => {
                   htmlFor=""
                   style={{
                     fontWeight: "400",
-                    fontSize: "clamp(14px,2vw,14px)",
+                    fontSize: "clamp(12px,2vw,14px)",
                     color: "#000000",
                   }}
                 >
                   Company Name
                 </label>
                 <input
-                  className="input-placeholder input-outline"
+                  className="input-placeholder input-outline input-all-box"
                   type="text"
                   placeholder="Enter Name"
                   style={{
-                    width: "100%",
-                      maxWidth: "400px",
+                   width:"400px",
                     border: "1px solid #DEDEDE",
                     backgroundColor: "#FBFBFB",
                     borderRadius: "8px",
@@ -99,19 +98,18 @@ const RegisterAccount = () => {
                   htmlFor=""
                   style={{
                     fontWeight: "400",
-                    fontSize: "clamp(14px,2vw,14px)",
+                    fontSize: "clamp(12px,2vw,14px)",
                     color: "#000000",
                   }}
                 >
                   GST Number (Optional)
                 </label>
                 <input
-                  className="input-placeholder input-outline"
+                  className="input-placeholder input-outline input-all-box"
                   type="text"
                   placeholder="Enter GST Number"
                   style={{
-                    width: "100%",
-                      maxWidth: "400px",
+                   width:"400px",
                     border: "1px solid #DEDEDE",
                     backgroundColor: "#FBFBFB",
                     borderRadius: "8px",
@@ -121,31 +119,32 @@ const RegisterAccount = () => {
                 />
               </div>
               {/* SUBDOMAIN and COMPANY WEBSITE */}
-              <div className="" style={{ display: "flex", gap: "16px" }}>
+              <div className="subdomain-compnay-inp" style={{ display: "flex", gap: "16px",}}>
                 <div
                   style={{
                     display: "flex",
                     flexDirection: "column",
                     gap: "5px",
+                   
                   }}
                 >
                   <label
                     htmlFor=""
                     style={{
                       fontWeight: "400",
-                      fontSize: "clamp(14px,2vw,14px)",
+                      fontSize: "clamp(12px,2vw,14px)",
                       color: "#000000",
                     }}
                   >
                     Subdomain
                   </label>
                   <input
-                    className="input-placeholder input-outline"
+                    className="subdomain-inp input-placeholder input-outline input-all-box"
                     type="text"
                     placeholder="Subdomain"
                     style={{
-                      width: "100%",
-                      maxWidth: "192px",
+                     
+                      width: "192px",
                       border: "1px solid #DEDEDE",
                       backgroundColor: "#FBFBFB",
                       borderRadius: "8px",
@@ -159,25 +158,26 @@ const RegisterAccount = () => {
                     display: "flex",
                     flexDirection: "column",
                     gap: "5px",
+                    
                   }}
                 >
                   <label
                     htmlFor=""
                     style={{
                       fontWeight: "400",
-                      fontSize: "clamp(14px,2vw,14px)",
+                      fontSize: "clamp(12px,2vw,14px)",
                       color: "#000000",
                     }}
                   >
                     Company Website (Optional)
                   </label>
                   <input
-                    className="input-placeholder input-outline"
+                    className="company-web-inp input-placeholder input-outline input-all-box"
                     type="text"
                     placeholder="Company Web"
                     style={{
-                     width: "100%",
-                      maxWidth: "192px",
+                  
+                      width: "192px",
                       border: "1px solid #DEDEDE",
                       backgroundColor: "#FBFBFB",
                       borderRadius: "8px",
@@ -201,7 +201,7 @@ const RegisterAccount = () => {
                   htmlFor=""
                   style={{
                     fontWeight: "400",
-                    fontSize: "clamp(14px,2vw,14px)",
+                    fontSize: "clamp(12px,2vw,14px)",
                     color: "#000000",
                   }}
                 >
@@ -226,7 +226,7 @@ const RegisterAccount = () => {
                       htmlFor=""
                       style={{
                         fontWeight: "400",
-                        fontSize: "clamp(14px,2vw,14px)",
+                        fontSize: "clamp(12px,2vw,14px)",
                         color: "#000000",
                       }}
                     >
@@ -236,7 +236,7 @@ const RegisterAccount = () => {
                       htmlFor=""
                       style={{
                         fontWeight: "400",
-                        fontSize: "clamp(14px,2vw,14px)",
+                        fontSize: "clamp(12px,2vw,14px)",
                         color: "#000000",
                       }}
                     >
@@ -246,7 +246,7 @@ const RegisterAccount = () => {
                       htmlFor=""
                       style={{
                         fontWeight: "400",
-                        fontSize: "clamp(14px,2vw,14px)",
+                        fontSize: "clamp(12px,2vw,14px)",
                         color: "#000000",
                       }}
                     >
@@ -260,7 +260,7 @@ const RegisterAccount = () => {
                       htmlFor=""
                       style={{
                         fontWeight: "400",
-                        fontSize: "clamp(14px,2vw,14px)",
+                        fontSize: "clamp(12px,2vw,14px)",
                         color: "#000000",
                       }}
                     >
@@ -270,7 +270,7 @@ const RegisterAccount = () => {
                       htmlFor=""
                       style={{
                         fontWeight: "400",
-                        fontSize: "clamp(14px,2vw,14px)",
+                        fontSize: "clamp(12px,2vw,14px)",
                         color: "#000000",
                       }}
                     >
@@ -280,7 +280,7 @@ const RegisterAccount = () => {
                       htmlFor=""
                       style={{
                         fontWeight: "400",
-                        fontSize: "clamp(14px,2vw,14px)",
+                        fontSize: "clamp(12px,2vw,14px)",
                         color: "#000000",
                         visibility: "hidden",
                       }}
@@ -298,7 +298,7 @@ const RegisterAccount = () => {
                   htmlFor=""
                   style={{
                     fontWeight: "400",
-                    fontSize: "clamp(14px,2vw,14px)",
+                    fontSize: "clamp(12px,2vw,14px)",
                     color: "#000000",
                   }}
                 >
@@ -306,21 +306,20 @@ const RegisterAccount = () => {
                 </label>
 
                 <select
-                  className="input-outline"
+                  className="input-outline input-all-box"
                   name=""
                   id=""
                   style={{
                     // width: "100%",
                     backgroundColor: "#FBFBFB",
-                     width: "100%",
-                  maxWidth: "400px",
+                    width:"400px",
                     border: "1px solid #DEDEDE",
                     borderRadius: "8px",
                     padding: "12px 16px",
                     outline: "none",
                     color: "#BABABA",
                     fontFamily: "Inter",
-                    fontSize: "clamp(14px,2vw,14px)",
+                    fontSize: "clamp(12px,2vw,14px)",
                   }}
                 >
                   <option value="">Select Industry</option>
@@ -333,7 +332,7 @@ const RegisterAccount = () => {
                 htmlFor=""
                 style={{
                   fontWeight: "400",
-                  fontSize: "clamp(14px,2vw,14px)",
+                  fontSize: "clamp(12px,2vw,14px)",
                   color: "#000000",
                 }}
               >
@@ -341,13 +340,14 @@ const RegisterAccount = () => {
                 Privacy Policy.
               </label>
                {/* Next Button */}
+               <Link to="/register-login-details">
               <button
+               className="input-all-box"
                 style={{
                   backgroundColor: "#0084FF",
                   padding: "12px 16px",
                   borderRadius: "8px",
-                  width: "100%",
-                  maxWidth: "400px",
+                   width:"400px",
                   border: "none",
                   color: "white",
                   fontSize: "clamp(14px,2vw,16px)",
@@ -356,13 +356,14 @@ const RegisterAccount = () => {
               >
                 Next
               </button>
+              </Link>
             </form>
               {/* Login Redirect Link */}
             <label
               htmlFor=""
               style={{
                 fontWeight: "400",
-                fontSize: "clamp(14px,2vw,14px)",
+                fontSize: "clamp(12px,2vw,14px)",
                 color: "#000000",
               }}
             >
@@ -379,7 +380,7 @@ const RegisterAccount = () => {
             width: "100%",
             // height: "100vh",
             display: "flex",
-            // justifyContent: "center",
+            justifyContent: "center",
             alignItems: "center",
           }}
         >
@@ -390,4 +391,4 @@ const RegisterAccount = () => {
   );
 };
 
-export default RegisterAccount;
+export default RegisterCompanyDetails;

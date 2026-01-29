@@ -1,8 +1,36 @@
+@media (max-width:1799px){
+    .superadmin-card-container{
+       gap: 20px;
+        justify-content: start !important;
+    }
+}
+@media (max-width:1440px){
+        .super-admindahsboard-container{
+         padding: 10px 20px !important;
+        
+    }
+}
+
 @media (max-width:768px){
     .login-background{
         display: none !important;
     }
     .login-container{
         /* background-color: #0447AA !important; */
+        /* display: block !important; */
+     
+    }
+
+   
+ 
+   
+}
+@media (max-width:425px){
+     .input-all-box{
+     width: 100% !important;
+     
+  
+   
     }
 }
+
