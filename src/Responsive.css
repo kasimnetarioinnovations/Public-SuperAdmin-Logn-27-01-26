@@ -1,0 +1,8 @@
+@media (max-width:768px){
+    .login-background{
+        display: none !important;
+    }
+    .login-container{
+        /* background-color: #0447AA !important; */
+    }
+}

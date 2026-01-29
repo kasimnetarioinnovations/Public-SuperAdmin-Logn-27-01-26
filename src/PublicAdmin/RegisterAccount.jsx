@@ -2,22 +2,24 @@ import React from "react";
 import login_background from "../assets/Image/login-image.png";
 import munc_logo from "../assets/Image/munc-logo.png";
 import { Link } from "react-router-dom";
+import "../Responsive.css"
 
 const RegisterAccount = () => {
   return (
     <div>
-      <div className="d-flex justify-content-between align-items-center">
+      <div className="d-flex justify-content-between">
         {/* login-container */}
         <div
           className="login-container"
           style={{
             backgroundColor: "white",
             width: "100%",
-            height: "100vh",
+            // height: "100vh",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             fontFamily: "Inter",
+            
           }}
         >
           <div
@@ -59,7 +61,7 @@ const RegisterAccount = () => {
                 Enter Company Details
               </p>
             </div>
-            <form action="">
+            <form action=""  style={{display:"flex", gap:"16px", flexDirection:"column"}}>
               {/* Name */}
               <div
                 style={{ display: "flex", flexDirection: "column", gap: "5px" }}
@@ -80,7 +82,7 @@ const RegisterAccount = () => {
                   placeholder="Enter Name"
                   style={{
                     width: "100%",
-                    minWidth: "400px",
+                      maxWidth: "400px",
                     border: "1px solid #DEDEDE",
                     backgroundColor: "#FBFBFB",
                     borderRadius: "8px",
@@ -109,7 +111,7 @@ const RegisterAccount = () => {
                   placeholder="Enter GST Number"
                   style={{
                     width: "100%",
-                    minWidth: "400px",
+                      maxWidth: "400px",
                     border: "1px solid #DEDEDE",
                     backgroundColor: "#FBFBFB",
                     borderRadius: "8px",
@@ -143,7 +145,7 @@ const RegisterAccount = () => {
                     placeholder="Subdomain"
                     style={{
                       width: "100%",
-                      minWidth: "192px",
+                      maxWidth: "192px",
                       border: "1px solid #DEDEDE",
                       backgroundColor: "#FBFBFB",
                       borderRadius: "8px",
@@ -174,8 +176,8 @@ const RegisterAccount = () => {
                     type="text"
                     placeholder="Company Web"
                     style={{
-                      width: "100%",
-                      minWidth: "192px",
+                     width: "100%",
+                      maxWidth: "192px",
                       border: "1px solid #DEDEDE",
                       backgroundColor: "#FBFBFB",
                       borderRadius: "8px",
@@ -192,7 +194,7 @@ const RegisterAccount = () => {
                   flexDirection: "column",
                   gap: "5px",
                   width: "100%",
-                  minWidth: "400px",
+                  maxWidth: "400px",
                 }}
               >
                 <label
@@ -308,9 +310,10 @@ const RegisterAccount = () => {
                   name=""
                   id=""
                   style={{
-                    width: "100%",
+                    // width: "100%",
                     backgroundColor: "#FBFBFB",
-                    minWidth: "400px",
+                     width: "100%",
+                  maxWidth: "400px",
                     border: "1px solid #DEDEDE",
                     borderRadius: "8px",
                     padding: "12px 16px",
@@ -344,7 +347,7 @@ const RegisterAccount = () => {
                   padding: "12px 16px",
                   borderRadius: "8px",
                   width: "100%",
-                  minWidth: "400px",
+                  maxWidth: "400px",
                   border: "none",
                   color: "white",
                   fontSize: "clamp(14px,2vw,16px)",
@@ -364,7 +367,7 @@ const RegisterAccount = () => {
               }}
             >
               {" "}
-              I Already have an Account ? <Link>Login</Link>.
+              I Already have an Account ? <Link style={{textDecoration:"none"}}>Login</Link>.
             </label>
           </div>
         </div>
@@ -374,13 +377,13 @@ const RegisterAccount = () => {
           style={{
             backgroundColor: "#0447AA",
             width: "100%",
-            height: "100vh",
+            // height: "100vh",
             display: "flex",
-            justifyContent: "center",
+            // justifyContent: "center",
             alignItems: "center",
           }}
         >
-          <img src={login_background} alt="login_background" />
+          <img src={login_background} alt="login_background"  style={{width:"100%", maxWidth:"782px"}}/>
         </div>
       </div>
     </div>
