@@ -8,8 +8,8 @@ import { MdKeyboardBackspace } from "react-icons/md";
 const RegisterLoginDetailsAdmin = () => {
   return (
     <div>
-         <div className="d-flex" style={{height:"100vh"}}>
-       
+      <div className="d-flex" style={{ height: "100vh" }}>
+
         {/* login-container */}
         <div
           className="login-container"
@@ -21,10 +21,10 @@ const RegisterLoginDetailsAdmin = () => {
             alignItems: "center",
             justifyContent: "center",
             fontFamily: "Inter",
-            
+
           }}
         >
-            
+
           <div
             className="register-account-container"
             style={{
@@ -35,19 +35,23 @@ const RegisterLoginDetailsAdmin = () => {
               alignItems: "center",
             }}
           >
-             <label
-                  htmlFor=""
-                  style={{
-                    fontWeight: "400",
-                    fontSize: "clamp(14px,2vw,16px)",
-                    color: "#000000",
-                    display:"flex",
-                    width:"100%"
-                     
-                  }}
-                >
-               <Link to="/"><MdKeyboardBackspace  style={{color:"black"}}/></Link> Back
-                </label>
+            {/* back button */}
+            <label
+              htmlFor=""
+              style={{
+                fontWeight: "400",
+                fontSize: "clamp(14px,2vw,16px)",
+                color: "#000000",
+                display: "flex",
+                width: "100%",
+                paddingBottom: "15px"
+
+              }}
+            >
+              <Link to="/" style={{textDecoration:"none", color:"black"}}><MdKeyboardBackspace style={{ color: "black" }} /> Back</Link> 
+            </label>
+
+            {/* munc logo */}
             <img
               src={munc_logo}
               alt="munc_logo"
@@ -57,6 +61,8 @@ const RegisterLoginDetailsAdmin = () => {
                 paddingBottom: "15px",
               }}
             />
+
+            {/* register account head title */}
             <div className="register-account-head-title text-center">
               <h3
                 style={{
@@ -77,8 +83,10 @@ const RegisterLoginDetailsAdmin = () => {
                 Login Details (Admin Account Setup)
               </p>
             </div>
-            <form action=""  style={{display:"flex", gap:"16px", flexDirection:"column"}}>
-              {/* Username */}
+
+            {/* register account form */}
+            <form action="" style={{ display: "flex", gap: "16px", flexDirection: "column" }}>
+              {/* name */}
               <div
                 style={{ display: "flex", flexDirection: "column", gap: "5px" }}
               >
@@ -90,14 +98,14 @@ const RegisterLoginDetailsAdmin = () => {
                     color: "#000000",
                   }}
                 >
-                 Username
+                  Full Name
                 </label>
                 <input
                   className="input-placeholder input-outline input-all-box"
                   type="text"
-                  placeholder="Enter Username"
+                  placeholder="Enter Full Name"
                   style={{
-                     width:"400px",
+                    width: "400px",
                     border: "1px solid #DEDEDE",
                     backgroundColor: "#FBFBFB",
                     borderRadius: "8px",
@@ -106,7 +114,8 @@ const RegisterLoginDetailsAdmin = () => {
                   }}
                 />
               </div>
-              {/* Company Email */}
+
+              {/* Email */}
               <div
                 style={{ display: "flex", flexDirection: "column", gap: "5px" }}
               >
@@ -118,14 +127,14 @@ const RegisterLoginDetailsAdmin = () => {
                     color: "#000000",
                   }}
                 >
-                  Company Email
+                  Email
                 </label>
                 <input
                   className="input-placeholder input-outline input-all-box"
                   type="email"
-                  placeholder="Enter Company Email"
+                  placeholder="Enter Admin Email"
                   style={{
-                    width:"400px",
+                    width: "400px",
                     border: "1px solid #DEDEDE",
                     backgroundColor: "#FBFBFB",
                     borderRadius: "8px",
@@ -134,8 +143,38 @@ const RegisterLoginDetailsAdmin = () => {
                   }}
                 />
               </div>
-                {/* Password */}
-               <div
+              
+              {/* Phone Number */}
+              <div
+                style={{ display: "flex", flexDirection: "column", gap: "5px" }}
+              >
+                <label
+                  htmlFor=""
+                  style={{
+                    fontWeight: "400",
+                    fontSize: "clamp(12px,2vw,14px)",
+                    color: "#000000",
+                  }}
+                >
+                  Phone Number
+                </label>
+                <input
+                  className="input-placeholder input-outline input-all-box"
+                  type="number"
+                  placeholder="Enter Phone Number"
+                  style={{
+                    width: "400px",
+                    border: "1px solid #DEDEDE",
+                    backgroundColor: "#FBFBFB",
+                    borderRadius: "8px",
+                    padding: "12px 16px",
+                    outline: "none",
+                  }}
+                />
+              </div>
+
+              {/* Password */}
+              <div
                 style={{ display: "flex", flexDirection: "column", gap: "5px" }}
               >
                 <label
@@ -151,9 +190,9 @@ const RegisterLoginDetailsAdmin = () => {
                 <input
                   className="input-placeholder input-outline input-all-box"
                   type="password"
-                  placeholder="Enter Company Passowrd"
+                  placeholder="Enter Admin Passowrd"
                   style={{
-                   width:"400px",
+                    width: "400px",
                     border: "1px solid #DEDEDE",
                     backgroundColor: "#FBFBFB",
                     borderRadius: "8px",
@@ -162,31 +201,46 @@ const RegisterLoginDetailsAdmin = () => {
                   }}
                 />
               </div>
-               
-             
-               {/* Next Button */}
-               <Link to="/register-select-plan">
-              <button
-               className='input-all-box'
+
+              {/* Next Button */}
+              <Link to="/otp-verification">
+                <button
+                  className='input-all-box'
+                  style={{
+                    backgroundColor: "#0084FF",
+                    padding: "12px 16px",
+                    borderRadius: "8px",
+                    width: "400px",
+                    border: "none",
+                    color: "white",
+                    fontSize: "clamp(14px,2vw,16px)",
+                    fontWeight: "500",
+                  }}
+                >
+                  Next
+                </button>
+              </Link>
+
+            </form>
+
+              {/* Login Redirect Link */}
+              <label
+                htmlFor=""
                 style={{
-                  backgroundColor: "#0084FF",
-                  padding: "12px 16px",
-                  borderRadius: "8px",
-                  width: "400px",
-                  border: "none",
-                  color: "white",
-                  fontSize: "clamp(14px,2vw,16px)",
-                  fontWeight: "500",
+                  fontWeight: "400",
+                  fontSize: "clamp(12px,2vw,14px)",
+                  color: "#000000",
+                  marginTop: "10px",
                 }}
               >
-                Next
-              </button>
-              </Link>
-            </form>
-              
+                {" "}
+                Already have an Account ? <Link to="/login" style={{ textDecoration: "none" }}>Login</Link>
+              </label>
+
           </div>
         </div>
-         {/* login-background */}
+
+        {/* login-background */}
         <div
           className="login-background"
           style={{
@@ -198,7 +252,7 @@ const RegisterLoginDetailsAdmin = () => {
             alignItems: "center",
           }}
         >
-          <img src={login_background} alt="login_background"  style={{width:"100%", maxWidth:"782px"}}/>
+          <img src={login_background} alt="login_background" style={{ width: "100%", maxWidth: "782px" }} />
         </div>
       </div>
     </div>

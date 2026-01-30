@@ -8,8 +8,8 @@ import { MdKeyboardBackspace } from "react-icons/md";
 const LoginAccount = () => {
   return (
     <div>
-          <div className="d-flex" style={{height:"100vh"}}>
-       
+      <div className="d-flex" style={{ height: "100vh" }}>
+
         {/* login-container */}
         <div
           className="login-container"
@@ -21,10 +21,9 @@ const LoginAccount = () => {
             alignItems: "center",
             justifyContent: "center",
             fontFamily: "Inter",
-            
+
           }}
         >
-            
           <div
             className="register-account-container"
             style={{
@@ -35,20 +34,23 @@ const LoginAccount = () => {
               alignItems: "center",
             }}
           >
-             <label
-                  htmlFor=""
-                  style={{
-                    fontWeight: "400",
-                    fontSize: "clamp(14px,2vw,16px)",
-                    color: "#000000",
-                    display:"flex",
-                    width:"100%",
-                    paddingBottom:"15px"
-                     
-                  }}
-                >
-               <Link to="/"><MdKeyboardBackspace  style={{color:"black"}}/></Link> Employee Login
-                </label>
+            {/* employee login button */}
+            <label
+              htmlFor=""
+              style={{
+                fontWeight: "400",
+                fontSize: "clamp(14px,2vw,16px)",
+                color: "#000000",
+                display: "flex",
+                width: "100%",
+                paddingBottom: "15px"
+
+              }}
+            >
+              <Link to="/" style={{textDecoration:"none", color:"black"}}><MdKeyboardBackspace style={{ color: "black", }} /> Employee Login</Link> 
+            </label>
+            
+            {/* munc logo */}
             <img
               src={munc_logo}
               alt="munc_logo"
@@ -58,6 +60,8 @@ const LoginAccount = () => {
                 paddingBottom: "15px",
               }}
             />
+
+            {/* login account head title */}
             <div className="register-account-head-title text-center">
               <h3
                 style={{
@@ -78,8 +82,10 @@ const LoginAccount = () => {
                 Welcome back! Please enter your details.
               </p>
             </div>
-            <form action=""  style={{display:"flex", gap:"16px", flexDirection:"column"}}>
-               
+
+            {/* login account form */}
+            <form action="" style={{ display: "flex", gap: "16px", flexDirection: "column" }}>
+
               {/* Company Email */}
               <div
                 style={{ display: "flex", flexDirection: "column", gap: "5px" }}
@@ -92,14 +98,14 @@ const LoginAccount = () => {
                     color: "#000000",
                   }}
                 >
-                  Company Email
+                  Email
                 </label>
                 <input
                   className="input-placeholder input-outline input-all-box"
                   type="email"
                   placeholder="Enter Company Email"
                   style={{
-                    width:"400px",
+                    width: "400px",
                     border: "1px solid #DEDEDE",
                     backgroundColor: "#FBFBFB",
                     borderRadius: "8px",
@@ -108,8 +114,9 @@ const LoginAccount = () => {
                   }}
                 />
               </div>
-                {/* Password */}
-               <div
+
+              {/* Password */}
+              <div
                 style={{ display: "flex", flexDirection: "column", gap: "5px" }}
               >
                 <label
@@ -127,7 +134,7 @@ const LoginAccount = () => {
                   type="password"
                   placeholder="Enter Company Passowrd"
                   style={{
-                   width:"400px",
+                    width: "400px",
                     border: "1px solid #DEDEDE",
                     backgroundColor: "#FBFBFB",
                     borderRadius: "8px",
@@ -136,42 +143,46 @@ const LoginAccount = () => {
                   }}
                 />
               </div>
-               
-             
-               {/* Next Button */}
-               <Link to="/register-select-plan">
-              <button
-               className='input-all-box'
-                style={{
-                  backgroundColor: "#0084FF",
-                  padding: "12px 16px",
-                  borderRadius: "8px",
-                  width: "400px",
-                  border: "none",
-                  color: "white",
-                  fontSize: "clamp(14px,2vw,16px)",
-                  fontWeight: "500",
-                }}
-              >
-                Next
-              </button>
+
+              {/* Next Button */}
+              <Link to="/super-admindashboard">
+                <button
+                  className='input-all-box'
+                  style={{
+                    backgroundColor: "#0084FF",
+                    padding: "12px 16px",
+                    borderRadius: "8px",
+                    width: "400px",
+                    border: "none",
+                    color: "white",
+                    fontSize: "clamp(14px,2vw,16px)",
+                    fontWeight: "500",
+                  }}
+                >
+                  Login
+                </button>
               </Link>
+
             </form>
-               {/* Register Redirect Link */}
-                          <label
-                            htmlFor=""
-                            style={{
-                              fontWeight: "400",
-                              fontSize: "clamp(12px,2vw,14px)",
-                              color: "#000000",
-                            }}
-                          >
-                            {" "}
-                            Don’t have an Account ? <Link to="/" style={{textDecoration:"none"}}>Register</Link>
-                          </label>
+
+            {/* Register Redirect Link */}
+            <label
+              htmlFor=""
+              style={{
+                fontWeight: "400",
+                fontSize: "clamp(12px,2vw,14px)",
+                color: "#000000",
+                marginTop: "10px",
+              }}
+            >
+              {" "}
+              Don’t have an Account ? <Link to="/register-login-details" style={{ textDecoration: "none" }}>Register</Link>
+            </label>
+
           </div>
         </div>
-         {/* login-background */}
+
+        {/* login-background */}
         <div
           className="login-background"
           style={{
@@ -183,7 +194,7 @@ const LoginAccount = () => {
             alignItems: "center",
           }}
         >
-          <img src={login_background} alt="login_background"  style={{width:"100%", maxWidth:"782px"}}/>
+          <img src={login_background} alt="login_background" style={{ width: "100%", maxWidth: "782px" }} />
         </div>
       </div>
     </div>

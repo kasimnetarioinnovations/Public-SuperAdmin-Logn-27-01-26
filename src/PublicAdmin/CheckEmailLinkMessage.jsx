@@ -9,8 +9,8 @@ import "../Responsive.css"
 const CheckEmailLinkMessage = () => {
   return (
     <div>
-         <div className="d-flex" style={{height:"100vh"}}>
-       
+      <div className="d-flex" style={{ height: "100vh" }}>
+
         {/* login-container */}
         <div
           className="login-container"
@@ -22,10 +22,9 @@ const CheckEmailLinkMessage = () => {
             alignItems: "center",
             justifyContent: "center",
             fontFamily: "Inter",
-            
+
           }}
         >
-            
           <div
             className="register-account-container"
             style={{
@@ -36,7 +35,7 @@ const CheckEmailLinkMessage = () => {
               alignItems: "center",
             }}
           >
-            
+            {/* munc logo */}
             <img
               src={munc_logo}
               alt="munc_logo"
@@ -46,6 +45,8 @@ const CheckEmailLinkMessage = () => {
                 paddingBottom: "15px",
               }}
             />
+
+            {/* suyccess */}
             <div className="register-account-head-title text-center">
               <h3
                 style={{
@@ -54,7 +55,7 @@ const CheckEmailLinkMessage = () => {
                   color: "#000000",
                 }}
               >
-               Check Your Email
+                🎉 Registration Successful
               </h3>
               <p
                 style={{
@@ -63,20 +64,27 @@ const CheckEmailLinkMessage = () => {
                   fontWeight: "400",
                 }}
               >
-                We’ve sent you a verification link to confirm your account.
+                Thanks for signing up! Your account is ready. Welcome aboard 🥳
               </p>
             </div>
-              <Link to="/login">
-              <button className='input-all-box' style={{width:"400px", border:"1px solid #0084FF", color:"#0084FF", padding: "12px 16px",
-                  borderRadius: "8px",
-                  fontSize: "clamp(14px,2vw,16px)",
-                  fontWeight: "500",backgroundColor:"transparent"}}>Thanks For Choosing Us !</button>
-                  </Link>
-           
-              
+
+            <Link to="/login">
+              <button className='input-all-box' style={{
+                width: "300px",
+                border: "1px solid #0084FF",
+                color: "#0084FF",
+                padding: "12px 16px",
+                borderRadius: "8px",
+                fontSize: "clamp(14px,2vw,16px)",
+                fontWeight: "500",
+                backgroundColor: "transparent"
+              }}>Thanks For Choosing Us !</button>
+            </Link>
+
           </div>
         </div>
-         {/* login-background */}
+
+        {/* login-background */}
         <div
           className="login-background"
           style={{
@@ -88,7 +96,7 @@ const CheckEmailLinkMessage = () => {
             alignItems: "center",
           }}
         >
-          <img src={login_background} alt="login_background"  style={{width:"100%", maxWidth:"782px"}}/>
+          <img src={login_background} alt="login_background" style={{ width: "100%", maxWidth: "782px" }} />
         </div>
       </div>
     </div>

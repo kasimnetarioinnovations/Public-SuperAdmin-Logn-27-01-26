@@ -7,7 +7,8 @@ import "../Responsive.css"
 const RegisterCompanyDetails = () => {
   return (
     <div>
-      <div className="d-flex" style={{height:"100vh"}}>
+      <div className="d-flex" style={{ height: "100vh" }}>
+
         {/* login-container */}
         <div
           className="login-container"
@@ -19,7 +20,7 @@ const RegisterCompanyDetails = () => {
             alignItems: "center",
             justifyContent: "center",
             fontFamily: "Inter",
-            
+
           }}
         >
           <div
@@ -32,6 +33,7 @@ const RegisterCompanyDetails = () => {
               alignItems: "center",
             }}
           >
+            {/* munc logo */}
             <img
               src={munc_logo}
               alt="munc_logo"
@@ -41,6 +43,8 @@ const RegisterCompanyDetails = () => {
                 paddingBottom: "15px",
               }}
             />
+
+            {/* register account head title */}
             <div className="register-account-head-title text-center">
               <h3
                 style={{
@@ -61,8 +65,11 @@ const RegisterCompanyDetails = () => {
                 Enter Company Details
               </p>
             </div>
-            <form action=""  style={{display:"flex", gap:"16px", flexDirection:"column"}}>
-              {/* Name */}
+
+            {/* register company details form */}
+            <form action="" style={{ display: "flex", gap: "16px", flexDirection: "column" }}>
+
+              {/* Company Name */}
               <div
                 style={{ display: "flex", flexDirection: "column", gap: "5px" }}
               >
@@ -81,7 +88,7 @@ const RegisterCompanyDetails = () => {
                   type="text"
                   placeholder="Enter Name"
                   style={{
-                   width:"400px",
+                    width: "400px",
                     border: "1px solid #DEDEDE",
                     backgroundColor: "#FBFBFB",
                     borderRadius: "8px",
@@ -90,6 +97,65 @@ const RegisterCompanyDetails = () => {
                   }}
                 />
               </div>
+
+              {/* Company Phone Number */}
+              <div
+                style={{ display: "flex", flexDirection: "column", gap: "5px" }}
+              >
+                <label
+                  htmlFor=""
+                  style={{
+                    fontWeight: "400",
+                    fontSize: "clamp(12px,2vw,14px)",
+                    color: "#000000",
+                  }}
+                >
+                  Company Phone Number
+                </label>
+                <input
+                  className="input-placeholder input-outline input-all-box"
+                  type="number"
+                  placeholder="Enter Phone Number"
+                  style={{
+                    width: "400px",
+                    border: "1px solid #DEDEDE",
+                    backgroundColor: "#FBFBFB",
+                    borderRadius: "8px",
+                    padding: "12px 16px",
+                    outline: "none",
+                  }}
+                />
+              </div>
+
+              {/* Company Email */}
+              <div
+                style={{ display: "flex", flexDirection: "column", gap: "5px" }}
+              >
+                <label
+                  htmlFor=""
+                  style={{
+                    fontWeight: "400",
+                    fontSize: "clamp(12px,2vw,14px)",
+                    color: "#000000",
+                  }}
+                >
+                  Company Email
+                </label>
+                <input
+                  className="input-placeholder input-outline input-all-box"
+                  type="email"
+                  placeholder="Enter Company Email"
+                  style={{
+                    width: "400px",
+                    border: "1px solid #DEDEDE",
+                    backgroundColor: "#FBFBFB",
+                    borderRadius: "8px",
+                    padding: "12px 16px",
+                    outline: "none",
+                  }}
+                />
+              </div>
+
               {/* GST NUMBER */}
               <div
                 style={{ display: "flex", flexDirection: "column", gap: "5px" }}
@@ -109,7 +175,7 @@ const RegisterCompanyDetails = () => {
                   type="text"
                   placeholder="Enter GST Number"
                   style={{
-                   width:"400px",
+                    width: "400px",
                     border: "1px solid #DEDEDE",
                     backgroundColor: "#FBFBFB",
                     borderRadius: "8px",
@@ -118,14 +184,16 @@ const RegisterCompanyDetails = () => {
                   }}
                 />
               </div>
+
               {/* SUBDOMAIN and COMPANY WEBSITE */}
-              <div className="subdomain-compnay-inp" style={{ display: "flex", gap: "16px",}}>
+              <div className="subdomain-compnay-inp" style={{ display: "flex", gap: "16px", }}>
+                {/* subdomain */}
                 <div
                   style={{
                     display: "flex",
                     flexDirection: "column",
                     gap: "5px",
-                   
+
                   }}
                 >
                   <label
@@ -143,7 +211,6 @@ const RegisterCompanyDetails = () => {
                     type="text"
                     placeholder="Subdomain"
                     style={{
-                     
                       width: "192px",
                       border: "1px solid #DEDEDE",
                       backgroundColor: "#FBFBFB",
@@ -153,12 +220,14 @@ const RegisterCompanyDetails = () => {
                     }}
                   />
                 </div>
+
+                {/* website */}
                 <div
                   style={{
                     display: "flex",
                     flexDirection: "column",
                     gap: "5px",
-                    
+
                   }}
                 >
                   <label
@@ -176,7 +245,7 @@ const RegisterCompanyDetails = () => {
                     type="text"
                     placeholder="Company Web"
                     style={{
-                  
+
                       width: "192px",
                       border: "1px solid #DEDEDE",
                       backgroundColor: "#FBFBFB",
@@ -187,146 +256,88 @@ const RegisterCompanyDetails = () => {
                   />
                 </div>
               </div>
-              {/* EMPLOYEE SIZE */}
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "5px",
-                  width: "100%",
-                  maxWidth: "400px",
-                }}
-              >
-                <label
-                  htmlFor=""
-                  style={{
-                    fontWeight: "400",
-                    fontSize: "clamp(12px,2vw,14px)",
-                    color: "#000000",
-                  }}
-                >
-                  Employee Size
-                </label>
+
+              <div className="subdomain-compnay-inp" style={{ display: "flex", gap: "16px", }}>
+                {/* employee size */}
                 <div
-                  style={{
-                    width: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "5px",
-                  }}
+                  style={{ display: "flex", flexDirection: "column", gap: "5px" }}
                 >
-                  <div
+                  <label
+                    htmlFor=""
                     style={{
-                      width: "100%",
-                      display: "flex",
-                      justifyContent: "space-between",
+                      fontWeight: "400",
+                      fontSize: "clamp(12px,2vw,14px)",
+                      color: "#000000",
                     }}
                   >
-                    <label
-                      htmlFor=""
-                      style={{
-                        fontWeight: "400",
-                        fontSize: "clamp(12px,2vw,14px)",
-                        color: "#000000",
-                      }}
-                    >
-                      <input type="checkbox" /> 0-10 Employee
-                    </label>
-                    <label
-                      htmlFor=""
-                      style={{
-                        fontWeight: "400",
-                        fontSize: "clamp(12px,2vw,14px)",
-                        color: "#000000",
-                      }}
-                    >
-                      <input type="checkbox" /> 10-25 Employee
-                    </label>
-                    <label
-                      htmlFor=""
-                      style={{
-                        fontWeight: "400",
-                        fontSize: "clamp(12px,2vw,14px)",
-                        color: "#000000",
-                      }}
-                    >
-                      <input type="checkbox" /> 25-50 Employee
-                    </label>
-                  </div>
-                  <div
-                    style={{ display: "flex", justifyContent: "space-between" }}
+                    Employee Size
+                  </label>
+
+                  <select
+                    className="input-outline input-all-box"
+                    name=""
+                    id=""
+                    style={{
+                      // width: "100%",
+                      backgroundColor: "#FBFBFB",
+                      width: "192px",
+                      border: "1px solid #DEDEDE",
+                      borderRadius: "8px",
+                      padding: "12px 16px",
+                      outline: "none",
+                      // color: "#BABABA",
+                      fontFamily: "Inter",
+                      fontSize: "clamp(12px,2vw,14px)",
+                    }}
                   >
-                    <label
-                      htmlFor=""
-                      style={{
-                        fontWeight: "400",
-                        fontSize: "clamp(12px,2vw,14px)",
-                        color: "#000000",
-                      }}
-                    >
-                      <input type="checkbox" /> 50-100 Employee
-                    </label>
-                    <label
-                      htmlFor=""
-                      style={{
-                        fontWeight: "400",
-                        fontSize: "clamp(12px,2vw,14px)",
-                        color: "#000000",
-                      }}
-                    >
-                      <input type="checkbox" /> 100+ Employee
-                    </label>
-                    <label
-                      htmlFor=""
-                      style={{
-                        fontWeight: "400",
-                        fontSize: "clamp(12px,2vw,14px)",
-                        color: "#000000",
-                        visibility: "hidden",
-                      }}
-                    >
-                      <input type="checkbox" /> 100+ Employee
-                    </label>
-                  </div>
+                    <option value="">Select</option>
+                    <option value="">0 - 10 Employees</option>
+                    <option value="">10 - 25 Employees</option>
+                    <option value="">25 - 50 Employees</option>
+                    <option value="">50 - 100 Employees</option>
+                    <option value="">100+ Employees</option>
+                  </select>
+                </div>
+
+                {/* Business Type */}
+                <div
+                  style={{ display: "flex", flexDirection: "column", gap: "5px" }}
+                >
+                  <label
+                    htmlFor=""
+                    style={{
+                      fontWeight: "400",
+                      fontSize: "clamp(12px,2vw,14px)",
+                      color: "#000000",
+                    }}
+                  >
+                    Business Type
+                  </label>
+
+                  <select
+                    className="input-outline input-all-box"
+                    name=""
+                    id=""
+                    style={{
+                      // width: "100%",
+                      backgroundColor: "#FBFBFB",
+                      width: "192px",
+                      border: "1px solid #DEDEDE",
+                      borderRadius: "8px",
+                      padding: "12px 16px",
+                      outline: "none",
+                      // color: "#BABABA",
+                      fontFamily: "Inter",
+                      fontSize: "clamp(12px,2vw,14px)",
+                    }}
+                  >
+                    <option value="">Select</option>
+                    <option value="">IT Solution</option>
+                    <option value="">Pharma</option>
+                  </select>
                 </div>
               </div>
-              {/* INDUSTRY */}
-              <div
-                style={{ display: "flex", flexDirection: "column", gap: "5px" }}
-              >
-                <label
-                  htmlFor=""
-                  style={{
-                    fontWeight: "400",
-                    fontSize: "clamp(12px,2vw,14px)",
-                    color: "#000000",
-                  }}
-                >
-                  Industry
-                </label>
 
-                <select
-                  className="input-outline input-all-box"
-                  name=""
-                  id=""
-                  style={{
-                    // width: "100%",
-                    backgroundColor: "#FBFBFB",
-                    width:"400px",
-                    border: "1px solid #DEDEDE",
-                    borderRadius: "8px",
-                    padding: "12px 16px",
-                    outline: "none",
-                    color: "#BABABA",
-                    fontFamily: "Inter",
-                    fontSize: "clamp(12px,2vw,14px)",
-                  }}
-                >
-                  <option value="">Select Industry</option>
-                  <option value="">Select Industry2</option>
-                  <option value="">Select Industry2</option>
-                </select>
-              </div>
               {/* Agree Checkbox */}
               <label
                 htmlFor=""
@@ -339,40 +350,31 @@ const RegisterCompanyDetails = () => {
                 <input type="checkbox" /> I Agree to the Terms & Conditions and
                 Privacy Policy.
               </label>
-               {/* Next Button */}
-               <Link to="/register-login-details">
-              <button
-               className="input-all-box"
-                style={{
-                  backgroundColor: "#0084FF",
-                  padding: "12px 16px",
-                  borderRadius: "8px",
-                   width:"400px",
-                  border: "none",
-                  color: "white",
-                  fontSize: "clamp(14px,2vw,16px)",
-                  fontWeight: "500",
-                }}
-              >
-                Next
-              </button>
+
+              {/* Next Button */}
+              <Link to="/register-select-plan">
+                <button
+                  className="input-all-box"
+                  style={{
+                    backgroundColor: "#0084FF",
+                    padding: "12px 16px",
+                    borderRadius: "8px",
+                    width: "400px",
+                    border: "none",
+                    color: "white",
+                    fontSize: "clamp(14px,2vw,16px)",
+                    fontWeight: "500",
+                  }}
+                >
+                  Next
+                </button>
               </Link>
+
             </form>
-              {/* Login Redirect Link */}
-            <label
-              htmlFor=""
-              style={{
-                fontWeight: "400",
-                fontSize: "clamp(12px,2vw,14px)",
-                color: "#000000",
-              }}
-            >
-              {" "}
-              I Already have an Account ? <Link style={{textDecoration:"none"}}>Login</Link>.
-            </label>
           </div>
         </div>
-         {/* login-background */}
+
+        {/* login-background */}
         <div
           className="login-background"
           style={{
@@ -384,7 +386,7 @@ const RegisterCompanyDetails = () => {
             alignItems: "center",
           }}
         >
-          <img src={login_background} alt="login_background"  style={{width:"100%", maxWidth:"782px"}}/>
+          <img src={login_background} alt="login_background" style={{ width: "100%", maxWidth: "782px" }} />
         </div>
       </div>
     </div>
