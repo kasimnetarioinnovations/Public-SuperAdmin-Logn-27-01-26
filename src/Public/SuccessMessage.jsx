@@ -1,12 +1,10 @@
 import React from 'react'
-import login_background from "../assets/Image/login-image.png";
+import login_background from "../assets/Image/munc-dahsboard-img.png";
 import munc_logo from "../assets/Image/munc-logo.png";
 import { Link } from "react-router-dom";
 import "../Responsive.css"
 
-
-
-const CheckEmailLinkMessage = () => {
+const SuccessMessage = () => {
   return (
     <div>
       <div className="d-flex" style={{ height: "100vh" }}>
@@ -64,7 +62,9 @@ const CheckEmailLinkMessage = () => {
                   fontWeight: "400",
                 }}
               >
-                Thanks for signing up! Your account is ready. Welcome aboard 🥳
+                Thanks for signing up! 🥳
+                <br/>
+                Your account is under verification process. You will receive email after activation.
               </p>
             </div>
 
@@ -96,11 +96,11 @@ const CheckEmailLinkMessage = () => {
             alignItems: "center",
           }}
         >
-          <img src={login_background} alt="login_background" style={{ width: "100%", maxWidth: "782px" }} />
+          <img src={login_background} alt="login_background" style={{ width: "100%", maxWidth: "482px" }} />
         </div>
       </div>
     </div>
   )
 }
 
-export default CheckEmailLinkMessage
+export default SuccessMessage

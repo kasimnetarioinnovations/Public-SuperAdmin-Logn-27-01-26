@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import login_background from "../assets/Image/login-image.png";
+import login_background from "../assets/Image/categoryblank.png";
 import munc_logo from "../assets/Image/munc-logo.png";
 import { Link } from "react-router-dom";
 import "../Responsive.css"
@@ -189,7 +189,7 @@ const RegisterSelectPlan = () => {
               </label>
 
               {/* Submit Button */}
-              <Link to="/email-verify-link-sms">
+              <Link to="/success-message">
                 <button
                   className='input-all-box'
                   style={{
@@ -212,6 +212,7 @@ const RegisterSelectPlan = () => {
 
           </div>
         </div>
+
         {/* login-background */}
         <div
           className="login-background"
@@ -224,7 +225,7 @@ const RegisterSelectPlan = () => {
             alignItems: "center",
           }}
         >
-          <img src={login_background} alt="login_background" style={{ width: "100%", maxWidth: "782px" }} />
+          <img src={login_background} alt="login_background" style={{ width: "100%", maxWidth: "482px" }} />
         </div>
       </div>
     </div>

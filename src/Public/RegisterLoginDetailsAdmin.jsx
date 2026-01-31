@@ -1,5 +1,5 @@
 import React from 'react';
-import login_background from "../assets/Image/login-image.png";
+import login_background from "../assets/Image/Customers.png";
 import munc_logo from "../assets/Image/munc-logo.png";
 import { Link } from "react-router-dom";
 import "../Responsive.css"
@@ -252,7 +252,7 @@ const RegisterLoginDetailsAdmin = () => {
             alignItems: "center",
           }}
         >
-          <img src={login_background} alt="login_background" style={{ width: "100%", maxWidth: "782px" }} />
+          <img src={login_background} alt="login_background" style={{ width: "100%", maxWidth: "582px" }} />
         </div>
       </div>
     </div>
