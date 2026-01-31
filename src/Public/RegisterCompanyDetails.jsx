@@ -1,5 +1,5 @@
 import React from "react";
-import login_background from "../assets/Image/login-image.png";
+import login_background from "../assets/Image/debitnote.png";
 import munc_logo from "../assets/Image/munc-logo.png";
 import { Link } from "react-router-dom";
 import "../Responsive.css"

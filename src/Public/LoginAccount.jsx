@@ -1,5 +1,5 @@
 import React from 'react'
-import login_background from "../assets/Image/login-image.png";
+import login_background from "../assets/Image/login.svg";
 import munc_logo from "../assets/Image/munc-logo.png";
 import { Link } from "react-router-dom";
 import "../Responsive.css"
@@ -47,7 +47,7 @@ const LoginAccount = () => {
 
               }}
             >
-              <Link to="/" style={{textDecoration:"none", color:"black"}}><MdKeyboardBackspace style={{ color: "black", }} /> Employee Login</Link> 
+              <Link to="/superadmin-login" style={{textDecoration:"none", color:"black"}}><MdKeyboardBackspace style={{ color: "black", }} /> Super Admin Login</Link> 
             </label>
             
             {/* munc logo */}
@@ -145,7 +145,7 @@ const LoginAccount = () => {
               </div>
 
               {/* Next Button */}
-              <Link to="/super-admindashboard">
+              <Link to="/admin-dashboard">
                 <button
                   className='input-all-box'
                   style={{
@@ -194,7 +194,7 @@ const LoginAccount = () => {
             alignItems: "center",
           }}
         >
-          <img src={login_background} alt="login_background" style={{ width: "100%", maxWidth: "782px" }} />
+          <img src={login_background} alt="login_background" style={{ width: "100%", maxWidth: "682px" }} />
         </div>
       </div>
     </div>

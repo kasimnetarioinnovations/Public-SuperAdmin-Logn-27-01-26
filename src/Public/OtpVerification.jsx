@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import login_background from "../assets/Image/login-image.png";
+import login_background from "../assets/Image/CustomerDue.png";
 import munc_logo from "../assets/Image/munc-logo.png";
 import { Link } from "react-router-dom";
 import "../Responsive.css"
@@ -160,7 +160,7 @@ const OtpVerification = () => {
                         alignItems: "center",
                     }}
                 >
-                    <img src={login_background} alt="login_background" style={{ width: "100%", maxWidth: "782px" }} />
+                    <img src={login_background} alt="login_background" style={{ width: "100%", maxWidth: "682px" }} />
                 </div>
             </div>
         </div>
