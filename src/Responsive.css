@@ -2,13 +2,58 @@
     .superadmin-card-container{
          gap: 20px;
         justify-content: start !important;
+           
     }
+    
+     .super-admindahsboard-container{
+       padding: 20px 60px !important;
+     }
+   .superadmin-navdashboard{
+     padding-right: 60px !important;
+     padding-left: 60px !important;
+   }
 }
+
 @media (max-width:1440px){
         .super-admindahsboard-container{
          padding: 10px 20px !important;
         
     }
+    .superadmin-navdashboar{
+     padding: 10px 20px !important;
+    }
+    .superadmin-card-container{
+        flex-wrap: wrap;
+    }
+    
+ 
+    
+  
+}
+
+@media (max-width:1368px){
+  .superadmin-main-content-w{
+    width: 100% !important;
+    gap: 10px;
+    overflow: auto;
+  }
+  .superadmin-graph-container{
+    gap: 10px;
+  }
+  .subscription-section{
+    width: 100% !important;
+    gap: 10px;
+    overflow: auto;
+    flex-direction: row !important;
+    
+  }
+  .ticket-section{
+    /* max-height: 100vh; */
+  }
+  .subscription-breakdown,.ticket-section {
+   max-height: 100% !important;
+  }
+
 }
 
 @media (max-width:768px){
@@ -28,9 +73,13 @@
 @media (max-width:425px){
      .input-all-box{
      width: 100% !important;
-     
-  
    
     }
+       .superadmin-dashboard-card {
+        max-width: 100% !important;
+        
+      
+    }
+   
 }
 
