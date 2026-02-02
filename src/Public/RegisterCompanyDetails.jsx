@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import login_background from "../assets/Image/debitnote.png";
 import munc_logo from "../assets/Image/munc-logo.png";
 import { Link } from "react-router-dom";
 import "../Responsive.css"
 
 const RegisterCompanyDetails = () => {
+  const [subdomain, setSubdomain] = useState("");
+
+  const handleSubdomain = (e) => {
+    setSubdomain(e.target.value);
+  };
+
   return (
     <div>
       <div className="d-flex" style={{ height: "100vh" }}>
@@ -156,107 +162,6 @@ const RegisterCompanyDetails = () => {
                 />
               </div>
 
-              {/* GST NUMBER */}
-              <div
-                style={{ display: "flex", flexDirection: "column", gap: "5px" }}
-              >
-                <label
-                  htmlFor=""
-                  style={{
-                    fontWeight: "400",
-                    fontSize: "clamp(12px,2vw,14px)",
-                    color: "#000000",
-                  }}
-                >
-                  GST Number (Optional)
-                </label>
-                <input
-                  className="input-placeholder input-outline input-all-box"
-                  type="text"
-                  placeholder="Enter GST Number"
-                  style={{
-                    width: "400px",
-                    border: "1px solid #DEDEDE",
-                    backgroundColor: "#FBFBFB",
-                    borderRadius: "8px",
-                    padding: "12px 16px",
-                    outline: "none",
-                  }}
-                />
-              </div>
-
-              {/* SUBDOMAIN and COMPANY WEBSITE */}
-              <div className="subdomain-compnay-inp" style={{ display: "flex", gap: "16px", }}>
-                {/* subdomain */}
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "5px",
-
-                  }}
-                >
-                  <label
-                    htmlFor=""
-                    style={{
-                      fontWeight: "400",
-                      fontSize: "clamp(12px,2vw,14px)",
-                      color: "#000000",
-                    }}
-                  >
-                    Subdomain
-                  </label>
-                  <input
-                    className="subdomain-inp input-placeholder input-outline input-all-box"
-                    type="text"
-                    placeholder="Subdomain"
-                    style={{
-                      width: "192px",
-                      border: "1px solid #DEDEDE",
-                      backgroundColor: "#FBFBFB",
-                      borderRadius: "8px",
-                      padding: "12px 16px",
-                      outline: "none",
-                    }}
-                  />
-                </div>
-
-                {/* website */}
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "5px",
-
-                  }}
-                >
-                  <label
-                    htmlFor=""
-                    style={{
-                      fontWeight: "400",
-                      fontSize: "clamp(12px,2vw,14px)",
-                      color: "#000000",
-                    }}
-                  >
-                    Company Website (Optional)
-                  </label>
-                  <input
-                    className="company-web-inp input-placeholder input-outline input-all-box"
-                    type="text"
-                    placeholder="Company Web"
-                    style={{
-
-                      width: "192px",
-                      border: "1px solid #DEDEDE",
-                      backgroundColor: "#FBFBFB",
-                      borderRadius: "8px",
-                      padding: "12px 16px",
-                      outline: "none",
-                    }}
-                  />
-                </div>
-              </div>
-
               <div className="subdomain-compnay-inp" style={{ display: "flex", gap: "16px", }}>
                 {/* employee size */}
                 <div
@@ -332,11 +237,136 @@ const RegisterCompanyDetails = () => {
                     }}
                   >
                     <option value="">Select</option>
-                    <option value="">IT Solution</option>
-                    <option value="">Pharma</option>
+                    <option value="">Retail & E-Commerce</option>
+                    <option value="">Food & Beverage</option>
+                    <option value="">Construction & Real Estate</option>
+                    <option value="">Healthcare & Pharmaceuticals</option>
+                    <option value="">Manufacturing</option>
+                    <option value="">Cosmetics & Personal Care</option>
+                    <option value="">Automotive</option>
+                    <option value="">IT & Software</option>
+                    <option value="">Other</option>
                   </select>
                 </div>
               </div>
+
+              {/* GST NUMBER */}
+              <div
+                style={{ display: "flex", flexDirection: "column", gap: "5px" }}
+              >
+                <label
+                  htmlFor=""
+                  style={{
+                    fontWeight: "400",
+                    fontSize: "clamp(12px,2vw,14px)",
+                    color: "#000000",
+                  }}
+                >
+                  GST Number (Optional)
+                </label>
+                <input
+                  className="input-placeholder input-outline input-all-box"
+                  type="text"
+                  placeholder="Enter GST Number"
+                  style={{
+                    width: "400px",
+                    border: "1px solid #DEDEDE",
+                    backgroundColor: "#FBFBFB",
+                    borderRadius: "8px",
+                    padding: "12px 16px",
+                    outline: "none",
+                  }}
+                />
+              </div>
+
+              {/* SUBDOMAIN and COMPANY WEBSITE */}
+              <div className="subdomain-compnay-inp" style={{ display: "flex", gap: "16px", }}>
+                {/* subdomain */}
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "5px",
+
+                  }}
+                >
+                  <label
+                    htmlFor=""
+                    style={{
+                      fontWeight: "400",
+                      fontSize: "clamp(12px,2vw,14px)",
+                      color: "#000000",
+                    }}
+                  >
+                    Subdomain
+                  </label>
+                  <input
+                    className="subdomain-inp input-placeholder input-outline input-all-box"
+                    type="text"
+                    placeholder="Subdomain"
+                    value={subdomain}
+                    onChange={(e) => setSubdomain(e.target.value)}
+                    style={{
+                      width: "192px",
+                      border: "1px solid #DEDEDE",
+                      backgroundColor: "#FBFBFB",
+                      borderRadius: "8px",
+                      padding: "12px 16px",
+                      outline: "none",
+                    }}
+                  />
+                </div>
+
+                {/* website */}
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "5px",
+
+                  }}
+                >
+                  <label
+                    htmlFor=""
+                    style={{
+                      fontWeight: "400",
+                      fontSize: "clamp(12px,2vw,14px)",
+                      color: "#000000",
+                    }}
+                  >
+                    Company Website (Optional)
+                  </label>
+                  <input
+                    className="company-web-inp input-placeholder input-outline input-all-box"
+                    type="text"
+                    placeholder="Company Web"
+                    style={{
+
+                      width: "192px",
+                      border: "1px solid #DEDEDE",
+                      backgroundColor: "#FBFBFB",
+                      borderRadius: "8px",
+                      padding: "12px 16px",
+                      outline: "none",
+                    }}
+                  />
+                </div>
+              </div>
+
+              {/* available subdomain */}
+              {subdomain && (
+                <label
+                  htmlFor=""
+                  style={{
+                    fontWeight: "400",
+                    fontSize: "clamp(12px,2vw,14px)",
+                    color: "green",
+                    marginTop: "-12px",
+                  }}
+                >
+                  <span style={{ color: "black" }}>Your Subdomain:</span> www.{subdomain}.munc.com ✅
+                </label>
+              )}
 
               {/* Agree Checkbox */}
               <label
