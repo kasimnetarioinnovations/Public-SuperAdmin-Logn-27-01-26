@@ -12,6 +12,8 @@ import { RxDotFilled } from "react-icons/rx";
 import { GrFormCheckmark } from "react-icons/gr";
 import { TbUserHexagon } from "react-icons/tb";
 import { MdOutlineRocketLaunch } from "react-icons/md";
+import { LuArrowDownUp } from "react-icons/lu";
+import Pagination from "./Pagination";
 
 const superAdminCard = [
   {
@@ -92,6 +94,78 @@ const openTicket = [
    issueTypeIcon: <GrFormCheckmark />,
   },
 ];
+ const companyList =[
+  {
+    regDate:"14/04/2024",
+    compName:"ZolarTecH",
+    PlanTyp:"Free",
+    noEmp:"10-25 Employee",
+    status:"Active",
+    statusIcon: <GrFormCheckmark />,
+    OrdDate:"Today"
+
+  },
+    {
+    regDate:"14/04/2024",
+    compName:"ZolarTecH",
+    PlanTyp:"Free",
+    noEmp:"10-25 Employee",
+    status:"Active",
+    statusIcon: <GrFormCheckmark />,
+    OrdDate:"Today"
+
+  },
+    {
+    regDate:"14/04/2024",
+    compName:"ZolarTecH",
+    PlanTyp:"Free",
+    noEmp:"10-25 Employee",
+    status:"Active",
+    statusIcon: <GrFormCheckmark />,
+    OrdDate:"Today"
+
+  },
+    {
+    regDate:"14/04/2024",
+    compName:"ZolarTecH",
+    PlanTyp:"Free",
+    noEmp:"10-25 Employee",
+    status:"Active",
+    statusIcon: <GrFormCheckmark />,
+    OrdDate:"Today"
+
+  },
+    {
+    regDate:"14/04/2024",
+    compName:"ZolarTecH",
+    PlanTyp:"Free",
+    noEmp:"10-25 Employee",
+    status:"Active",
+    statusIcon: <GrFormCheckmark />,
+    OrdDate:"Today"
+
+  },
+    {
+    regDate:"14/04/2024",
+    compName:"ZolarTecH",
+    PlanTyp:"Free",
+    noEmp:"10-25 Employee",
+    status:"Active",
+    statusIcon: <GrFormCheckmark />,
+    OrdDate:"Today"
+
+  },
+   {
+    regDate:"14/04/2024",
+    compName:"ZolarTecH",
+    PlanTyp:"Free",
+    noEmp:"10-25 Employee",
+    status:"Inactive",
+    statusIcon: <RxDotFilled />,
+    OrdDate:"Today"
+
+  }
+ ]
 const SuperAdminDashboard = () => {
   // Revenue Graph
   const width = 1000;
@@ -158,7 +232,7 @@ const SuperAdminDashboard = () => {
     <div>
       {/* Navbar */}
       <nav
-        className="super-admindahsboard-container"
+        className="superadmin-navdashboard"
         style={{
           display: "flex",
           justifyContent: "space-between",
@@ -198,26 +272,28 @@ const SuperAdminDashboard = () => {
         style={{
           backgroundColor: "#EAEAEA",
           padding: "39px 180px",
-          height: "100vh",
+          // height: "100vh",
           gap: "39px",
           display: "flex",
           flexDirection: "column",
         }}
       >
         {/* superadmin-card */}
-        <div className="superadmin-card-container d-flex justify-content-between flex-wrap">
+        <div className="superadmin-card-container d-flex justify-content-between ">
           {superAdminCard.map((item, idx) => (
             <div
               key={idx}
-              className="superadmin-dashboard-card input-all-box"
+              className="superadmin-dashboard-card"
               style={{
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
                 fontFamily: "Inter",
                 backgroundColor: "#FFFFFF",
-                width: "240px",
-                height: "107px",
+                width:"100%",
+                maxWidth: "240px",
+                height:"100vh",
+                maxHeight: "107px",
                 padding: "0 10px",
                 borderBottom: "6px solid #0F31AC",
                 borderRadius: "5px",
@@ -293,20 +369,22 @@ const SuperAdminDashboard = () => {
         </div>
         {/* superadmin-graph-container */}
         <div
-          className="superadmin-graph-container"
+          className="superadmin-graph-container flex-wrap"
           style={{
             fontFamily: "Inter",
             display: "flex",
             justifyContent: "space-between",
+            width:"100%",
           }}
         >
           {/* revenue-section */}
           <div
-            className="revenue-section"
+            className="revenue-section superadmin-main-content-w"
             style={{
               backgroundColor: "#FFFFFF",
-              width: "910px",
-              height: "540px",
+              
+              maxWdth: "910px",
+              maxHeight: "540px",
               borderRadius: "8px",
               padding: "20px",
               display: "flex",
@@ -478,7 +556,7 @@ const SuperAdminDashboard = () => {
               ))}
             </svg>
 
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <div style={{ display:"grid", gridTemplateColumns:"repeat(4, 0fr)", gap:"10px"}}>
               {revenueGrowthCard.map((item, idx) => (
                 <div
                   key={idx}
@@ -531,11 +609,11 @@ const SuperAdminDashboard = () => {
           {/* Subcritpion-section */}
           <div className="subscription-section d-flex flex-column justify-content-between">
             <div
-              className="subscription-breakdown"
+              className="subscription-breakdown superadmin-main-content-w flex-wrap"
               style={{
                 backgroundColor: "white",
-                width: "599px",
-                height: "282px",
+                maxWidth: "599px",
+                maxHeight: "282px",
                 borderRadius: "8px",
                 padding: "24px",
                 display: "flex",
@@ -645,11 +723,11 @@ const SuperAdminDashboard = () => {
             </div>
             {/* Ticket-section */}
             <div
-              className="ticket-section"
+              className="ticket-section superadmin-main-content-w"
               style={{
                 backgroundColor: "white",
-                width: "599px",
-                height: "214px",
+                maxWidth: "599px",
+                maxHeight: "214px",
                 borderRadius: "8px",
                 padding: "24px",
                 display:"flex",
@@ -709,10 +787,49 @@ const SuperAdminDashboard = () => {
         </div>
        
            {/* Companies List */}
-            <div className="companies-list" style={{backgroundColor:"white",borderRadius:"8px", width:"100%", height:"676px", padding:"24px"}}>
+            <div className="companies-list" style={{backgroundColor:"white",borderRadius:"8px", width:"100%", padding:"24px", overflow:"auto" }}>
                <h2 style={{ fontSize: "clamp(16px,2vw,20px)" }}>
                 Companies List
               </h2>
+
+                 <table style={{width:"100%",fontFamily:"Inter",}}>
+                  <thead style={{backgroundColor:"#EBF8FF",color:"#727681" , }}>
+                    <tr>
+                      <th style={{ padding:"4px 16px",fontWeight:"400",fontSize:"14px",}}>Registered Date <span><LuArrowDownUp/></span></th>
+                      <th style={{ padding:"4px 16px",fontWeight:"400",fontSize:"14px",}}>Company Name</th>
+                      <th style={{ padding:"4px 16px",fontWeight:"400",fontSize:"14px",}}>Plan Type</th>
+                      <th style={{ padding:"4px 16px",fontWeight:"400",fontSize:"14px",}}>No. of Employee</th>
+                      <th style={{ padding:"4px 16px",fontWeight:"400",fontSize:"14px",}}>Status</th>
+                      <th style={{ padding:"4px 16px",fontWeight:"400",fontSize:"14px",}}>Order Date</th>
+                    </tr>
+                  </thead>
+                   <tbody style={{ color:"#0E101A"}}>
+                     {companyList.map((item,idx)=>(
+                    <tr key={idx}>
+                      <td style={{ padding:"8px 16px",fontSize:"14px",fontWeight:"400" }}>{item.regDate}</td>
+                      <td style={{ padding:"8px 16px",fontSize:"14px",fontWeight:"400" }}>{item.compName}</td>
+                      <td style={{ padding:"8px 16px",fontSize:"14px",fontWeight:"400" }}>{item.PlanTyp}</td>
+                      <td style={{ padding:"8px 16px",fontSize:"14px",fontWeight:"400" }}>{item.noEmp}</td>
+                      <td style={{ padding:"8px 16px",fontSize:"14px",fontWeight:"400" , display:"flex"}}> <span
+                    className="d-flex align-items-center"
+                    style={{
+                      backgroundColor: item.status === 'Active' ? "#F7C7C9" : item.status === 'Inactive' ? "#F7F7C7" : "",
+                      color: item.status === 'Active' ? "#A80205" : item.status === 'Inactive' ? "#7E7000" : "",
+                      borderRadius: "50px",
+                      padding: "4px 8px",
+                      textAlign:"center"
+                    }}
+                  >
+                     <span>{item.statusIcon}</span>
+                     {item.status}
+                   </span></td>
+                      <td style={{ padding:"8px 16px",fontSize:"14px",fontWeight:"400" }}>{item.OrdDate}</td>
+                    </tr>
+                    ))}
+                   </tbody>
+                     
+                 </table>
+                <Pagination/>
             </div>
       </div>
     </div>
