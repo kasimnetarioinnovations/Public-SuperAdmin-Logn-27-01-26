@@ -3,9 +3,11 @@ import login_background from "../assets/Image/debitnote.png";
 import munc_logo from "../assets/Image/munc-logo.png";
 import { Link } from "react-router-dom";
 import "../Responsive.css"
+import PopUpIndustryChoose from "./PopUpIndustryChoose";
 
 const RegisterCompanyDetails = () => {
   const [subdomain, setSubdomain] = useState("");
+  const [showSelectIndustry, setshowSelectIndustry]= useState(false)
 
   const handleSubdomain = (e) => {
     setSubdomain(e.target.value);
@@ -193,6 +195,7 @@ const RegisterCompanyDetails = () => {
                       // color: "#BABABA",
                       fontFamily: "Inter",
                       fontSize: "clamp(12px,2vw,14px)",
+                      cursor:"pointer"
                     }}
                   >
                     <option value="">Select</option>
@@ -219,7 +222,8 @@ const RegisterCompanyDetails = () => {
                     Business Type
                   </label>
 
-                  <select
+                  <div
+                    onClick={setshowSelectIndustry}
                     className="input-outline input-all-box"
                     name=""
                     id=""
@@ -234,19 +238,11 @@ const RegisterCompanyDetails = () => {
                       // color: "#BABABA",
                       fontFamily: "Inter",
                       fontSize: "clamp(12px,2vw,14px)",
+                      cursor:"pointer"
                     }}
                   >
-                    <option value="">Select</option>
-                    <option value="">Retail & E-Commerce</option>
-                    <option value="">Food & Beverage</option>
-                    <option value="">Construction & Real Estate</option>
-                    <option value="">Healthcare & Pharmaceuticals</option>
-                    <option value="">Manufacturing</option>
-                    <option value="">Cosmetics & Personal Care</option>
-                    <option value="">Automotive</option>
-                    <option value="">IT & Software</option>
-                    <option value="">Other</option>
-                  </select>
+                    Tap and Choose 👈
+                  </div>
                 </div>
               </div>
 
@@ -410,6 +406,7 @@ const RegisterCompanyDetails = () => {
           style={{
             backgroundColor: "#0447AA",
             width: "100%",
+            
             // height: "100vh",
             display: "flex",
             justifyContent: "center",
@@ -419,6 +416,12 @@ const RegisterCompanyDetails = () => {
           <img src={login_background} alt="login_background" style={{ width: "100%", maxWidth: "782px" }} />
         </div>
       </div>
+       
+      {showSelectIndustry && 
+          
+        <PopUpIndustryChoose setshowSelectIndustry={setshowSelectIndustry}/>
+      }
+     
     </div>
   );
 };
