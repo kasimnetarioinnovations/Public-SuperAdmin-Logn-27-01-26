@@ -63,14 +63,16 @@ const SuccessMessage = () => {
                 }}
               >
                 Thanks for signing up! 🥳
-                <br/>
-                Your account is under verification process. You will receive email after activation.
+                <br />
+                Your account is under verification process. You will receive email after activation, then you can login.
+                <br />
+                Your Company Website: <span style={{ color: "green" }}>www.netario.munc.com</span>
               </p>
             </div>
 
             <Link to="/login">
               <button className='input-all-box' style={{
-                width: "300px",
+                width: "240px",
                 border: "1px solid #0084FF",
                 color: "#0084FF",
                 padding: "12px 16px",
