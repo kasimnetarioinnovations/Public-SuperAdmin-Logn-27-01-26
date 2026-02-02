@@ -59,7 +59,8 @@ const PopUpIndustryChoose = ({ setshowSelectIndustry }) => {
     }, 1000);
   };
   return (
-    <div onClick={() => setshowSelectIndustry(false)}style={{position:"absolute", background: "rgba(255, 255, 255, 0.3)",   backdropFilter: "blur(1px)", width:"100%",zIndex:"9999", display:"flex", justifyContent:"center", alignItems:"center", height:"100vh", top:"0", bottom:"0"}}>
+    <div onClick={() => setshowSelectIndustry(false)}style={{position:"absolute",   backgroundColor: "rgba(0,0,0,0.27)",
+        backdropFilter: "blur(1px)", width:"100%",zIndex:"9999", display:"flex", justifyContent:"center", alignItems:"center", height:"100vh", top:"0", bottom:"0"}}>
          {/* <div className="login-all-pages d-flex flex-column align-items-center justify-content-center" style={{ position:"absolute",zIndex:"9999", top:"0", bottom:"0",}}> */}
               <div
                onClick={(e) => e.stopPropagation()}
